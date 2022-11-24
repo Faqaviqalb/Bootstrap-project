@@ -1,0 +1,293 @@
+@font-face{
+    font-family: 'Yekan';
+    src : url('fonts/Yekan.woff');
+}
+
+*{
+    font-family: 'Yekan';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+
+    
+/* NAVBAR */
+.navbar{
+    background-color: white;
+}
+@media only screen and (max-width:360px){
+    .navbar{
+        width: 650px;
+    }
+}
+
+#bell{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.336);
+}#envelope{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.336);
+}
+#badge1{
+    position: relative;
+    bottom: 18px;
+    left: 30px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #d1a4a4, rgb(228, 84, 79));
+}
+#badge2{
+    position: relative;
+    bottom: 15px;
+    left: 32px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #893dc7fb, #5691dafb);
+}
+@media only screen and (max-width:400px){
+    #badge2{
+        position: relative;
+        left: 100px;
+    }
+}
+#searchi{
+    font-size: 25px;
+}
+#openbtn:focus #search{
+    position: relative;
+    top: 50px;
+}
+
+
+#openbtn {
+    font-size: 25px;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.651);
+    border: none;
+}
+
+
+/* BOXES   */
+.boxes{
+    height: 150px;
+    border-radius: 10px;
+}
+#boxes{
+
+    color: white;
+}
+
+.heading{
+    font-size: 16px;
+    font-weight: 600;
+}
+.mid{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+#first{
+    background-image: linear-gradient(to right, #899ddffb, #132fcf);
+}
+#second{
+    background-image: linear-gradient(to right, #f77846fb, #e9b065fb);
+}
+#third{
+    background-image: linear-gradient(to right, rgb(221, 161, 191),rgb(224, 77, 114));
+}
+#forth{
+    background-image: linear-gradient(to right, #893dc7fb, #5691dafb);
+}
+.mdis{
+    font-size: 50px;
+    color: rgba(252, 251, 250, 0.61);
+    position: relative;
+    right: 200px;
+    bottom: 90px;
+}
+
+
+/* CHART */
+#title{
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.829);
+}
+#mid{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.671);
+}
+#price{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.932);
+}
+
+
+/* FIRST CHART */
+#dia{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.title{
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.753);
+}
+.down{
+    background-color: white;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#todo-title{
+    font-weight: 600;
+}
+.over-title{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.459);
+}
+#number{
+    font-size: 30px;
+    font-weight: 600;
+}
+#summary-title{
+    font-weight: 600;
+}
+
+.topping{
+    font-size: 20px;
+    font-weight: 700;
+}
+.top{
+    font-size: 15px;
+}
+.percentage{
+    display: flex;
+    position: relative;
+}
+.perc{
+    font-size: 15px;
+    position: absolute;
+    right: 270px;
+}
+
+.txt{
+    position: relative;
+    top: 300px;
+    text-align: center;
+}
+#myTxt{
+    border: 1px solid rgba(0, 0, 0, 0.363);
+}
+
+#ul{
+    font-size: 20px;
+    list-style-type: none;
+}
+#ul li{
+    position: relative;
+    top: 20px;
+}
+#todoList{
+    display: flex;
+}
+#checkbox{
+    position: absolute;
+    top:10px;
+}
+
+input[type=checkbox]:checked+.toAdd{
+    text-decoration-line: line-through;
+}
+#trashy{
+    color: rgba(0, 0, 0, 0.479);
+    position: absolute;
+    right: 270px;
+}
+
+/* SIDEBAR */
+#sideHead{
+    background-color: rgb(119, 112, 209);
+    height: 70px;
+    padding: 20px 60px;
+    text-align: center;
+    color: white;
+}
+.leftEls{
+    width: 300px;
+    position: relative;
+    right: 20px;
+    bottom: 82px;
+}
+@media only screen and (max-width:500px){
+    .leftEls{
+        display: none;
+    }
+}
+
+.before{
+    text-align: end;
+    padding-left: 20px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.733);
+    font-size: 20px;
+    
+}
+.sides{
+    background-color: white;
+    width: 100%;
+
+}
+
+.text:hover{
+    background-color: rgba(102, 97, 97, 0.192);
+}
+
+.dropend .dropdown-toggle::after{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+
+/* SECOND SIDEBAR */
+#openbutton{
+    font-size: 25px;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.651);
+    border: none;
+}
+
+/* OFFCANVAS */
+@media only screen and (max-width:400px){
+    #right{
+        position: absolute;
+        right: 300px;
+    }
+}
+
+.offcanvas-title{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(119, 112, 209);
+    height: 70px;
+    padding: 25px 71px;
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+}
+.p{
+    font-size:20px;
+    color: rgba(0, 0, 0, 0.788);
+}
+.offcanvas .dropend .dropdown-toggle::after{
+    position: absolute;
+    right: 180px;
+    top: 10px;
+}
+

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Project</title>
+    <link rel="stylesheet" href="bs.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
+
+
+</head>
+<body style="background-color: rgba(219, 223, 245, 0.5);">
+  <nav class="navbar navbar-expand-sm">
+    <div class="container ms-auto">
+      <button class="btn btn info " type="button" id="openbutton" data-bs-toggle="offcanvas" data-bs-target="#right"><span class="navbar-toggler-icon"></span> </button>
+      <div class="navbar-brand img-fluid"><img src="50.jpg" alt="logo" style="width:40px"></div>
+
+    <div class="dropdown" id="lang">
+        <button type="button" class="btn dropdown-toggle " data-bs-toggle="dropdown" id="persian"> فارسی</button>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><span class="dropdown-item-text" id="lang-list">English</span></li>
+        </ul>
+    </div>
+
+    <div class="icon-wrapper1">
+        <i class="mdi mdi-bell-outline" id="bell"></i>
+        <span class="badge" id="badge1">3</span>
+    </div>
+    <i class="mdi mdi-email-outline" id="envelope"></i>
+    <span class="badge" id="badge2">3</span>
+
+
+    <div class="me-auto d-none d-sm-flex ms-5">
+
+      <!-- <button class="navbar-toggler" type="button" id="openbtn" data-bs-toggle="collapse" data-bs-target="#sidebar"><span class="navbar-toggler-icon"></span> </button>
+      <div id="sidebar" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <form class="d-flex" id="sidebar">
+              <input class="form-control"  type="text" placeholder="جستجوکنید..." id="search">
+              <button class="btn btn-search" type="button"><i class="mdi mdi-magnify" id="searchi"></i></button>
+            </form>
+          </li>
+        </ul>
+
+      </div> -->
+      <form class="d-flex ms-5">
+        <input class="form-control mt-2" style="max-height:40px" type="text" placeholder="جستجوکنید..." id="search">
+        <button class="btn btn-search" type="button"><i class="mdi mdi-magnify" id="searchi"></i></button>
+      </form>
+    </div>
+    </div>
+  </nav>
+
+
+  <!-- Pushing everything to the right -->
+  <div id="right" class="offcanvas offcanvas-end" style="width:250px">
+    <div class="offcanvas-header">
+      <div class="offcanvas-title">کوییکس لب</div>
+      <div class="offcanvas-body mt-5">
+        <nav class="navbar">
+          <ul class="navbar-nav">
+            <p class="p">داشبورد</p>
+            <li class="nav-item ms-5">
+              <div class="dropdown dropend">
+                <button type="button" class="btn dropdown-toggle" style="text-align:end;color: rgba(0, 0, 0, 0.747); font-size: 18px;"  data-bs-toggle="dropdown" > <i class="mdi mdi-speedometer ms-2"></i>داشبورد </button>
+                <ul class="dropdown-menu">
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                </ul>
+            </div>
+            </li>
+            <li class="nav-item ms-5">
+              <div class="dropdown dropend">
+                <button type="button" class="btn dropdown-toggle" style="text-align:end;color: rgba(0, 0, 0, 0.747); font-size: 18px;"  data-bs-toggle="dropdown" > <i class="mdi mdi-flask-round-bottom ms-2"></i>قالب ها </button>
+                <ul class="dropdown-menu">
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                </ul>
+            </div>
+            </li>
+            <li class="nav-item ms-5">
+              <p class="p mt-1">اپلیکیشن ها</p>
+              <div class="dropdown dropend">
+                <button type="button" class="btn dropdown-toggle" style="text-align:end;color: rgba(0, 0, 0, 0.747); font-size: 18px;"  data-bs-toggle="dropdown"><i class="mdi mdi-email-outline ms-2"></i> ایمیل</button>
+                <ul class="dropdown-menu">
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                </ul>
+            </div>
+            </li>
+            <li class="nav-item ms-5">
+              <div class="dropdown dropend">
+                <button type="button" class="btn dropdown-toggle" style="text-align:end;color: rgba(0, 0, 0, 0.747); font-size: 18px;"  data-bs-toggle="dropdown" > <i class="mdi mdi-cellphone-charging ms-2"></i>اپلیکیشن ها </button>
+                <ul class="dropdown-menu">
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                </ul>
+            </div>
+            </li>
+            <li class="nav-item ms-5">
+              <div class="dropdown dropend">
+                <button type="button" class="btn dropdown-toggle" style="text-align:end;color: rgba(0, 0, 0, 0.747); font-size: 18px;"  data-bs-toggle="dropdown" > <i class="mdi mdi-chart-timeline-variant-shimmer ms-2"></i>نمودارها </button>
+                <ul class="dropdown-menu">
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                </ul>
+            </div>
+            </li>
+            <li class="nav-item ms-5">
+              <div class="dropdown dropend">
+                <button type="button" class="btn dropdown-toggle" style="text-align:end;color: rgba(0, 0, 0, 0.747); font-size: 18px;"  data-bs-toggle="dropdown" > <i class="mdi mdi-table-edit ms-2"></i>عناصر یوآی </button>
+                <ul class="dropdown-menu">
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                    <li><span class="dropdown-item-text">English</span></li>
+                </ul>
+            </div>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class=" d-flex">
+     <!-- Right Elements -->
+      <div class="rights me-3">
+         <!-- BOXES -->
+        <div class="container-fluid mt-4 " id="boxes">
+          <div class="row">
+            <div class="col-sm-3 ms-2 ms-md-4 me-md-0 me-5 boxes" style="width: 305px;" id="first">
+              <p class="heading mt-2 ">رضایت مشتری</p>
+              <p class="mid"> ۹۹٪</p>
+              <p class="date"> شهریور-آذر ۱۳۹۹</p>
+              <div class="icon">
+                <i class="mdi mdi-heart mdis"></i>
+              </div>
+            </div>
+            <div class="col-sm-3 ms-3 mt-md-0 mt-3 me-md-0 me-5 boxes" style="width: 305px;" id="second">
+              <p class="heading mt-2"> مشتری های جدید</p>
+              <p class="mid"> ۴۵۵۶</p>
+              <p class="date"> شهریور-آذر ۱۳۹۹</p>
+              <div class="icon">
+                <i class="mdi mdi-account-group mdis"></i>
+              </div>
+            </div>
+            <div class="col-sm-3 me-md-2 mt-md-0 mt-3 me-5 boxes" style="width: 305px;" id="third">
+              <p class="heading mt-2"> سود خالص</p>
+              <p class="mid"> ۸۵۴۱ تومان</p>
+              <p class="date"> شهریور-آذر ۱۳۹۹</p>
+              <div class="icon"></div>
+              <i class="mdi mdi-cash mdis"></i>
+            </div>
+            <div class="col-sm-3 me-md-4 me-5 mt-md-0 mt-3 boxes " style="width: 305px;" id="forth">
+              <p class="heading mt-2"> محصولات فروخته شده</p>
+              <p class="mid"> ۴۵۵۶</p>
+              <p class="date"> شهریور-آذر ۱۳۹۹</p>
+              <div class="icon"></div>
+              <i class="mdi mdi-cart mdis"></i>
+            </div>
+          </div>
+        </div>
+  
+  <!-- First diagram -->
+        <div class="container mt-5" style="height:500px" id="dia">
+          <div class="row">
+            <div class="col d-flex me-3 mt-2">
+              <div>ماه</div>
+              <div class="me-3">هفته</div>
+              <div class="me-3">روز</div>
+            </div>
+            <div class="col ms-3 mt-2" style="text-align: end">
+              <div id="title">فروش محصولات</div>
+              <div id="mid">مجموع فروش های ماه</div>
+              <div id="price" class="mt-2">۱۲۵۵۵ تومان</div>
+            </div>
+          </div>
+          <div class="diagram">
+            <canvas id="myChart" style="max-height:300px"></canvas>
+          </div>
+  
+          <!-- progress -->
+  
+          <div class="container mt-3" id="progress">
+            <div class="row " >
+              <div class="col mt-2">
+                <div class="title">موبایل</div>
+                <div class="progress" style="height:8px;">
+                  <div class="progress-bar" style="background: rgb(133, 110, 236);width: 40%;"></div>
+                </div>
+              </div>
+              <div class="col mt-2">
+                <div class="title">تبلت</div>
+                <div class="progress" style="height:8px;">
+                  <div class="progress-bar" style="background: rgb(240, 61, 99);width: 60%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+        <!-- TodoList and more -->
+        <div class="container">
+          <div class="d-flex mt-5" style="column-gap:10px">
+            <!-- To Do List -->
+            <div class="col-sm-4 down"> 
+              <div id="todo-title" class="mt-4 text-center"> کارهایی که باید انجام دهم</div>
+              <div class="txt">
+                <form>
+                  <input type="text" class="pt-2" name="ListItem" >
+                  <button type="button" id="submit" class="btn btn-dark">ثبت</button>
+                </form>
+              </div>
+              <ul id="ul"></ul>
+            </div>
+    
+            <!-- Middle Box -->
+            <div class="col-sm-4 mt-md-0 mt-4 down"id="overview">
+              <div class="over-title mt-4 text-center"> بازبینی سفارشات</div>
+              <div id="number" >۵۶۸۰</div>
+              <div class="over-title mt-4"> مجموع سود</div>
+              <div class="topping">۳۰</div>
+              <div class="percentage">
+                <div class="top">سفارش آنلاین</div>
+                <div class="perc">۳۰٪</div>
+              </div>
+              <div class="progress mt-3" id="online" style="height:8px;width:300px">
+                <div class="progress-bar" style="background: rgb(133, 110, 236);width: 30%;"></div>
+              </div>
+              <div class="topping mt-4">۵۰</div>
+              <div class="percentage">
+                <div class="top">سفارش آفلاین</div>
+                <div class="perc">۵۰٪</div>
+              </div>
+              <div class="progress mt-3" id="online" style="height:8px;width:300px">
+                <div class="progress-bar " style="background: rgb(110, 236, 110);width: 50%;"></div>
+              </div>
+              <div class="topping mt-4">۲۰</div>
+              <div class="percentage">
+                <div class="top">سفارش حضوری</div>
+                <div class="perc">۲۰٪</div>
+              </div>
+              <div class="progress mt-3" id="online" style="height:8px;width:300px">
+                <div class="progress-bar " style="background: rgb(235, 70, 70);width: 20%;"></div>
+              </div>
+            </div>
+            <!-- Second Chart -->
+            <div class="col-sm-4 down mt-md-0 mt-4" id="summary">
+              <div id="summary-title" class="mt-4 text-center">خلاصه ی سفارشات</div>
+              <div class="barchart mt-5">
+                <canvas id="chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+  
+  
+        <div class="experiment">
+  
+
+  </div>
+      </div>
+  
+
+
+
+    <script src="bs.js"></script>
+</body>
+</html>
